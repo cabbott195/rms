@@ -1,6 +1,5 @@
-var express = require('express');
-var router = express.Router();
+// GET catalog home page.
+router.get('/', ircontroller.index);
 
-//Require controller modules
-var ir_controller = require('../controllers/irController');
-var viewir_controller = require('../controllers/viewirController');
+// GET request for creating a Book. NOTE This must come before routes that display Book (uses id).
+router.get('/book/create', book_controller.book_create_get);

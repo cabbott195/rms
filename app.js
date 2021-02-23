@@ -11,7 +11,7 @@ var app = express();
 
 //cabbott195:J9ihPHDuSS2hZv3
 
-var mongoDB = '';
+var mongoDB = 'mongodb+srv://cabbott195:J9ihPHDuSS2hZv3@cluster0.2sbog.mongodb.net/Cluster0?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 
 // view engine setup
