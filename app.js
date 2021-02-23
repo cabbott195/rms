@@ -11,8 +11,18 @@ var app = express();
 
 //cabbott195:J9ihPHDuSS2hZv3
 
-var mongoDB = 'mongodb+srv://cabbott195:J9ihPHDuSS2hZv3@cluster0.2sbog.mongodb.net/Cluster0?retryWrites=true&w=majority';
+//Import the mongoose module
+var mongoose = require('mongoose');
+
+var mongoDB = 'mongodb+srv://DominicTorres:Teamtorresalv2020@cluster0.2sbog.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
+
+//Get the default connection
+var db = mongoose.connection;
+
+//Bind connection to error event (to get notification of connection errors)
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
