@@ -14,7 +14,7 @@ var app = express();
 //Import the mongoose module
 var mongoose = require('mongoose');
 
-var mongoDB = 'mongodb+srv://DominicTorres:Teamtorresalv2020@cluster0.2sbog.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+var mongoDB = 'mongodb+srv://cabbott195:J9ihPHDuSS2hZv3@cluster0.2sbog.mongodb.net/Cluster0?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 
 //Get the default connection
@@ -34,6 +34,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+/*app.use('/', homeRouter);*/
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
