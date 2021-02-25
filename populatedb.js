@@ -25,6 +25,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 var ir = []
 var viewIr = []
+var updatedIr = []
 
 function irCreate(
      first_name,

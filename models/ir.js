@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+
 const { DateTime } = require("luxon");  //for date handling
 
 var Schema = mongoose.Schema;
@@ -33,22 +34,20 @@ var IrSchema = new Schema({
 });
 
 // Virtual for persons "full" name.
-IrSchema.virtual('name').get(function () {
+/*IrSchema.virtual('name').get(function () {
     return this.last_name + ', ' + this.first_name;
-});
+});*/
 
 // Virtual for this author instance URL.
-AuthorSchema.virtual('url').get(function () {
-    return '/catalog/author/' + this._id;
+IrSchema.virtual('url').get(function () {
+    return '/home/create/';
 });
 
-AuthorSchema.virtual('date_of_birth_yyyy_mm_dd').get(function () {
+IrSchema.virtual('date_of_birth_yyyy_mm_dd').get(function () {
     return DateTime.fromJSDate(this.date_of_birth).toISODate(); //format 'YYYY-MM-DD'
 });
 
-AuthorSchema.virtual('date_of_death_yyyy_mm_dd').get(function () {
-    return DateTime.fromJSDate(this.date_of_death).toISODate(); //format 'YYYY-MM-DD'
-});
+
 
 // Export model.
-module.exports = mongoose.model('Author', AuthorSchema);
+module.exports = mongoose.model('Ir', IrSchema);

@@ -5,13 +5,84 @@ block content
 
   form(method='POST' action='')
     div.form-group
-      label(for='first_name') First Name:
+      label(for='first_name') First Name
       input#first_name.form-control(type='text', placeholder='First name' name='first_name' required='true' value=(undefined===person ? '' : person.first_name) )
-      label(for='last_name') Last Name:
+      label(for='last_name') Last Name
       input#last_name.form-control(type='text', placeholder='Last name' name='last_name' required='true' value=(undefined===person ? '' : person.last_name))
     div.form-group
-      label(for='date_of_birth') Date of birth:
-      input#date_of_birth.form-control(type='date', name='date_of_birth' value=(undefined===author ? '' : person.date_of_birth_mm_dd_yyyy) )
+      label(for='date_of_birth') Date of birth
+      input#date_of_birth.form-control(type='date', name='date_of_birth' value=(undefined===person ? '' : person.date_of_birth_mm_dd_yyyy) )
+    div.form-group
+      label(for='p_age') Age
+      input#p_age.form-control(type='text', name='p_age' value=(undefined===person ? '' : person.p_age) )
+    div.form-group
+      label(for='p_sex') Sex
+      input#p_sex.form-control(type='text', name='p_sex' value=(undefined===person ? '' : person.p_sex) )
+    div.form-group
+      label(for='p_race') Origin
+      input#p_race.form-control(type='text', name='p_race' value=(undefined===person ? '' : person.p_race) )
+    div.form-group
+      label(for='p_weight') Weight
+      input#p_weight.form-control(type='text', name='p_weight' value=(undefined===person ? '' : person.p_weight) )
+    div.form-group
+      label(for='p_height') Height
+      input#p_height.form-control(type='text', name='p_height' value=(undefined===person ? '' : person.p_height) )
+    div.form-group
+      label(for='p_eyes') Eyes
+      input#p_eyes.form-control(type='text', name='p_eyes' value=(undefined===person ? '' : person.p_eyes) )
+    div.form-group
+      label(for='p_hair') Hair
+      input#p_hair.form-control(type='text', name='p_hair' value=(undefined===person ? '' : person.p_hair) )
+    div.form-group
+      label(for='p_tats') Tattoos, Scars, Etc...
+      input#p_tats.form-control(type='text', name='p_tats' value=(undefined===person ? '' : person.p_tats) )
+    div.form-group
+      label(for='p_address') Residential Address
+      input#p_address.form-control(type='text', name='p_address' value=(undefined===person ? '' : person.p_address) )
+    div.form-group
+      label(for='p_phone') Telephone
+      input#p_phone.form-control(type='text', name='p_phone' value=(undefined===person ? '' : person.p_phone) )
+    div.form-group
+      label(for='p_ssn') Social Security Number
+      input#p_ssn.form-control(type='text', name='p_ssn' value=(undefined===person ? '' : person.p_ssn) )
+    div.form-group
+      label(for='p_dln') Drivers License Number
+      input#p_dln.form-control(type='text', name='p_dln' value=(undefined===person ? '' : person.p_dln) )
+    div.form-group
+      label(for='p_gang') Gang Relation
+      input#p_gang.form-control(type='text', name='p_gang' value=(undefined===person ? '' : person.p_gang) )
+    div.form-group
+      label(for='ir_location') Location
+      input#ir_location.form-control(type='text', name='ir_location' value=(undefined===ir ? '' : person.ir_location) )
+    div.form-group
+      label(for='ir_locationName') Location Name
+      input#ir_locationName.form-control(type='text', name='ir_locationName' value=(undefined===ir ? '' : person.ir_locationName) )
+    div.form-group
+      label(for='ir_narrative') Narrative
+      input#ir_narrative.form-control(type='text', name='ir_narrative' value=(undefined===ir ? '' : person.ir_narrative) )
+    <h1>Vehicle</h1>
+    div.form-group
+      label(for='ir_type') Type
+      input#ir_type.form-control(type='text', name='v_type' value=(undefined===vehicle ? '' : person.v_type) )
+    div.form-group
+      label(for='v_vin') Vin
+      input#v_vin.form-control(type='text', name='v_vin' value=(undefined===vehicle ? '' : person.v_vin) )
+    div.form-group
+      label(for='v_year') Year
+      input#v_year.form-control(type='text', name='v_year' value=(undefined===vehicle ? '' : person.v_year) )
+    div.form-group
+      label(for='v_make') Make
+      input#v_make.form-control(type='text', name='v_make' value=(undefined===vehicle ? '' : person.v_make) )
+    div.form-group
+      label(for='v_model') Model
+      input#v_model.form-control(type='text', name='v_model' value=(undefined===vehicle ? '' : person.v_model) )
+    div.form-group
+      label(for='v_color') Color
+      input#v_color.form-control(type='text', name='v_color' value=(undefined===vehicle ? '' : person.v_color) )
+    div.form-group
+      label(for='v_otherInfo') Other Info
+      input#v_otherInfo.form-control(type='text', name='v_otherInfo' value=(undefined===vehicle ? '' : person.v_otherInfo) )
+
     button.btn.btn-primary(type='submit') Submit
 
   if errors 
