@@ -14,12 +14,30 @@
     "dotenv": "^8.2.0",
     "express": "~4.16.1",
     "express-validator": "^6.9.2",
+    "faker": "^5.4.0",
+    "g": "^2.0.1",
     "helmet": "^4.4.1",
     "http-errors": "^1.6.3",
+    "json-server": "^0.16.3",
     "luxon": "^1.26.0",
     "mongodb": "^3.6.4",
     "mongoose": "^5.11.18",
     "morgan": "^1.9.1",
+    "node": "^15.8.0",
     "pug": "^2.0.0-beta11"
-  }
+  },
+  "description": "",
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cabbott195/rms.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cabbott195/rms/issues"
+  },
+  "homepage": "https://github.com/cabbott195/rms#readme"
 }

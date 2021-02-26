@@ -12,8 +12,8 @@ if (!userArgs[0].startsWith('mongodb')) {
 */
 
 var async = require('async')
-var viewIr = require('./home/view')
-var ir = require('./models/create')
+//var viewIr = require('./models/ir')
+var ir = require('./models/ir')
 
 
 var mongoose = require('mongoose');
@@ -24,10 +24,10 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 var ir = []
-var viewIr = []
-var updatedIr = []
+//var viewIr = []
+//var updatedIr = []
 
-function irCreate(
+function ir(
      first_name,
      last_name,
      d_birth,
@@ -54,10 +54,9 @@ function irCreate(
      v_model,
      v_color,
      v_otherInfo) {
-
-    ir = {first_name:first_name , last_name: last_name, d_birth, p_age, p_sex, p_race, p_weight, p_height, p_eyes, p_hair, p_tats, p_address, p_phone, p_ssn, p_dln, p_gang, ir_location, ir_locationName, ir_narrative, ir_type, v_vin, v_year, v_make, v_model, v_color, v_otherInfo}
+        ir = {first_name:first_name , last_name: last_name, d_birth:d_birth, p_age:p_age, p_sex:p_sex, p_race:p_race, p_weight:p_weight, p_height:p_height, p_eyes:p_eyes, p_hair:p_hair, p_tats:p_tats, p_address:p_address, p_phone:p_phone, p_ssn:p_ssn, p_dln:p_dln, p_gang:p_gang, ir_location:ir_location, ir_locationName:ir_locationName, ir_narrative:ir_narrative, ir_type:ir_type, v_vin:v_vin, v_year:v_year, v_make:v_make, v_model:v_model, v_color:v_color, v_otherInfo:v_otherInfo}
     
-    var ir = new ir(ir);
+        var ir = new Ir(ir);
          
     author.save(function (err) {
       if (err) {
@@ -65,7 +64,7 @@ function irCreate(
         return
       }
       console.log('New Report: ' + ir);
-      ir.push(ir)
+      irs.push(ir)
       cb(null, ir)
     }  );
   }
