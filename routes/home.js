@@ -7,24 +7,24 @@ var ir_controller = require('../controllers/irController');
 /// IR ROUTES ///
 
 // GET RMS home page.
-router.get('/', ircontroller.index);
+router.get('/', ir_controller.index);
 
 // GET request for creating a IR. NOTE This must come before routes that display Book (uses id).
-router.get('/ir/create', ir_controller.ir_create_get);
+router.get('/ir/create', 'test');
 
-// POST request for creating IR.
-router.post('/ir/create', ir_controller.ir_create_post);
+// // POST request for creating IR.
+// router.post('/ir/create', 'test');
 
-// GET request to delete IR.
-router.get('/ir/:id/delete', ir_controller.ir_delete_get);
+// // GET request to delete IR.
+// router.get('/ir/:id/delete', 'test');
 
-// POST request to delete IR.
-router.post('/ir/:id/delete', ir_controller.ir_delete_post);
+// // POST request to delete IR.
+// router.post('/ir/:id/delete', 'test');
 
-// GET request to update IR.
-router.get('/ir/:id/update', ir_controller.ir_update_get);
+// // GET request to update IR.
+// router.get('/ir/:id/update', 'test');
 
-// POST request to update IR.
-router.post('/ir/:id/update', ir_controller.ir_update_post);
+// // POST request to update IR.
+// router.post('/ir/:id/update', 'test');
 
 module.exports = router;
